@@ -7,12 +7,10 @@ import topo from "../../../../assets/topo.png";
 
 const width = Dimensions.get('screen').width;
 
-export default function Header(){
+export default function Header({ titulo }){
     return<>
         <Image source={topo} style={estilos.topo} />
-        <StyleText style={estilos.titulo}>
-            Detalhes da Cesta
-        </StyleText>
+        <StyleText style={estilos.titulo}> { titulo } </StyleText>
     </>
 }
 

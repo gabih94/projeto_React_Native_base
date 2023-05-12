@@ -5,12 +5,12 @@ import Header from './componentes/Header';
 import Body from './componentes/Body';
 
 
-export default function Cesta() {
+export default function Cesta({ topo, body}) {
     return <>
-        <Header />
+        <Header {...topo} />
 
         <View style={estilos.cesta}>
-            <Body />
+            <Body {...body} />
         </View>
     </>
 }

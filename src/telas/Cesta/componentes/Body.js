@@ -2,31 +2,23 @@ import React from "react";
 import { StyleSheet , Image, View } from 'react-native';
 
 import StyleText from "../../../components/StyleText";
+import StyleButton from "../../../components/Button";
 
-import logo from "../../../../assets/logo.png";
 
-export default function Body () {
+export default function Body ({ nome, logoFazenda, nomeFazenda, descricao, preco, botao } ) {
     return <>
-        <StyleText style={estilos.nome}>
-            Cesta de Verduras
-        </StyleText>
+        <StyleText style={estilos.nome}> { nome } </StyleText>
 
         <View style={estilos.fazenda}>
-            <Image source={logo} style={estilos.imagemFazenda}/>
-            <StyleText style={estilos.nomeFazenda}>
-                Jenny Jack Farm
-            </StyleText>
+            <Image source={logoFazenda} style={estilos.imagemFazenda}/>
+            <StyleText style={estilos.nomeFazenda}> { nomeFazenda } </StyleText>
         </View>
 
-        <StyleText style={estilos.descricao}>
-            Uma Cesta com produtos selecionados 
-            cuidadosamente da fazenda direto 
-            para sua cozinha
-        </StyleText>
+        <StyleText style={estilos.descricao}> { descricao } </StyleText>
 
-        <StyleText style={estilos.preco}>
-            R$ 40,00
-        </StyleText>
+        <StyleText style={estilos.preco}> { preco } </StyleText>
+
+        <StyleButton texto={ botao } style={estilos.botao} onPress={() => {}}/>
     </>
 }
 
@@ -61,5 +53,8 @@ const estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         marginTop: 8,
+    },
+    botao: {
+        marginTop: 16,
     },
 })

@@ -1,3 +1,4 @@
+import { Montserrat_400Regular, Montserrat_700Bold } from "@expo-google-fonts/montserrat";
 import React from "react";
 import { StyleSheet, Text} from "react-native";
 
@@ -12,11 +13,11 @@ export default function StyleText({ children, style }) {
 
 const estilos = StyleSheet.create({
     texto: {
-        fontFamily: "MontserratRegular",
+        fontFamily: Montserrat_400Regular,
         fontWeight: "normal",
     },
     textoNegrito: {
-        fontFamily: "MontserratBold",
+        fontFamily: Montserrat_700Bold,
         fontWeight: "normal",
     }
 })
